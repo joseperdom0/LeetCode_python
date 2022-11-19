@@ -34,6 +34,12 @@
 #  
 # Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
+# SOLUTIONS
+# Brute Force approach
+# Time Complexity O(n^2)
+# Space Complexity O(1)
+
+
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -49,14 +55,31 @@ class Solution(object):
                 print("j:", j)
 
                 if i + j == target:
-                    print (i, j)
-                    return nums.index(i),nums.index(j, counter)
+                    print(i, j)
+                    return nums.index(i), nums.index(j, counter)
 
-
-nums = [3, 3]
-target = 6
-solution = Solution()
-print(solution.twoSum(nums, target))
 
 # Runtime: 5122 ms, faster than 13.35% of Python3 online submissions for Two Sum.
 # Memory Usage: 14.8 MB, less than 96.14% of Python3 online submissions for Two Sum.
+
+class Solution2:
+    def twoSum(self, nums, target):
+        hashmap = {}
+        for i in range(len(nums)):
+            difference = target - nums[i]
+            print(hashmap)
+            if difference in hashmap:
+                return [i, hashmap[difference]]
+            hashmap[nums[i]] = i
+
+
+
+nums = [2, 7, 14, 11]
+target = 13
+solution = Solution()
+solution2 = Solution2()
+# print(solution.twoSum(nums, target))
+print(solution2.twoSum(nums, target))
+
+# Runtime: 153 ms, faster than 36.14% of Python3 online submissions for Two Sum.
+# Memory Usage: 15.2 MB, less than 26.28% of Python3 online submissions for Two Sum.
