@@ -99,6 +99,12 @@ class Solution5:
             #print(f'reversed {reversed}')
             #print(f'original {original}')
         return reversed == x
+# Runtime67 ms
+# Beats
+# 89.1%
+# Memory14 MB
+# Beats
+# 16.27%
 
 x = 121
 x2 = 10
