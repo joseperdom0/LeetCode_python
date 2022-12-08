@@ -84,9 +84,23 @@ class Solution4:
             reversed = (reversed * 10) + (x % 10)
             print(reversed)
             x = x//10
+        return x
 
+# Without converting into ARRAY
+class Solution5:
+    def isPalindrome(self, x: int) -> bool:
+        original = x
+        reversed = 0
+        while original > 0:
+            last_digit = original % 10
+            reversed = reversed * 10 + last_digit
+            original = original // 10
+            #print(f'last digit {last_digit}')
+            #print(f'reversed {reversed}')
+            #print(f'original {original}')
+        return reversed == x
 
-x = 103
+x = 121
 x2 = 10
-solution = Solution4()
+solution = Solution5()
 solution.isPalindrome(x)
