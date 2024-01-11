@@ -76,7 +76,8 @@ class Solution2:
     def runningSum(self, nums: list[int]) -> list[int]:
         out = []
         out.append(nums[0])
-
+        for i in range(len(nums)):
+            print(i)
         return out     
 
 
