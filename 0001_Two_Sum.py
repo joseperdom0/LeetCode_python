@@ -41,7 +41,7 @@
 
 
 class Solution(object):
-    def twoSum(self, nums, target):
+    def twoSum(self, nums: list[int], target):
         """
         :type nums: List[int]
         :type target: int
