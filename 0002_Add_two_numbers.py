@@ -48,8 +48,11 @@ class Solution:
         return l1
 
 
-l1 = [1, 2, 3]
-l2 = [1, 2, 3]
+
+
+
+l1 = [2,4,3]
+l2 = [5,6,4]
 
 s1 = Solution()
 s1.addTwoNumbers(l1,l2)
