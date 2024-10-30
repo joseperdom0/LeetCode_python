@@ -1,7 +1,10 @@
-map = {2: 0,
-       1: 200,
-       40: 30}
+import requests
 
-if 2 in map:
-    print("found")
-    print("test")
+
+PAGE_URL = 'http://google.com'
+
+
+resp =  requests.get(PAGE_URL)
+html_str = resp.content.decode()
+print(html_str)
+print(resp.status_code)
